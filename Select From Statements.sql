@@ -55,5 +55,5 @@ SELECT *
 FROM <DataBaseName>.<schema>.<TableName>
 */
 SELECT *
-FROM SQLTutorial.dbo.EmployeeDemographics
+FROM SQLTutorial.dbo.EmployeeSalary
 
