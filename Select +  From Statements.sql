@@ -1,11 +1,7 @@
 /*
 Select Statements
 *, Top, Distinct, Count, As, Max, Min, Avg
-*/
 
-
-
-/*
 Table 1 Query:
 Select all columns and rows from EmployeeDemographics
 */
