@@ -56,46 +56,50 @@ GROUP BY Gender
 
 
 
-
+-- when we add an order by to our code  it's for orders Either ascending or descending
+-- by default SQL has an ascending feature there's gonna be smallest to largest going down the code below is used an ascending feature by default
 SELECT Gender, COUNT(Gender) AS CountGender 
 FROM EmployeeDemographics
 WHERE Age > 31
 GROUP BY Gender
-ORDER BY CountGender
-
-
-SELECT Gender, COUNT(Gender) AS CountGender 
-FROM EmployeeDemographics
-WHERE Age > 31
-GROUP BY Gender
-ORDER BY CountGender ASC
-
+ORDER BY CountGender -- by default Ascending
 
 
 SELECT Gender, COUNT(Gender) AS CountGender 
 FROM EmployeeDemographics
 WHERE Age > 31
 GROUP BY Gender
-ORDER BY CountGender DESC
+ORDER BY CountGender ASC -- Ascending
+
 
 
 SELECT Gender, COUNT(Gender) AS CountGender 
 FROM EmployeeDemographics
 WHERE Age > 31
 GROUP BY Gender
-ORDER BY Gender 
+ORDER BY CountGender DESC -- Descending
+
+
+SELECT Gender, COUNT(Gender) AS CountGender 
+FROM EmployeeDemographics
+WHERE Age > 31
+GROUP BY Gender
+ORDER BY Gender -- by default Ascending
 
 SELECT *
 FROM EmployeeDemographics
-ORDER BY Age
+ORDER BY Age -- by default Ascending
 
 
 SELECT *
 FROM EmployeeDemographics
-ORDER BY Age DESC
+ORDER BY Age DESC -- Descending
 
-
- SELECT *
+/*
+the difference below we use two columns in order by
+in sequence will be arranged by age then gender
+*/
+SELECT *
 FROM EmployeeDemographics
 ORDER BY Age, Gender 
 
@@ -110,11 +114,16 @@ FROM EmployeeDemographics
 ORDER BY Age DESC, Gender DESC
 
 
+
+-- we could just use numbers so order by 1, 2, 3, 4, 5 i could 
+-- the two codes below equal 
 SELECT *
 FROM EmployeeDemographics
 ORDER BY 4 DESC, 5 DESC
 
-
+SELECT *
+FROM EmployeeDemographics
+ORDER BY Age DESC, Gender DESC
 
 
 
