@@ -65,9 +65,9 @@ FULL OUTER JOIN [SQL Tutorial ].dbo.EmployeeSalary
 
 
 /*   
-Code 3- 
-
-
+Code 3- left outer join is gonna take the left table and say we want everything from the left table and everything that's overlapping 
+	but if it's only in the right table we do not want it so we're gonna look at everything in the EmployeeDemographics table regardless
+	of whether or not it has a match on the EmployeeID in the EmployeeSalary table 
 */
 SELECT *
 FROM [SQL Tutorial ].dbo.EmployeeDemographics
@@ -76,9 +76,7 @@ LEFT OUTER JOIN [SQL Tutorial ].dbo.EmployeeSalary
 
 
 /*   
-Code 4- 
-
-
+Code 4- same concept for Code 3 but for EmployeeSalary (exact opposite)
 */
 SELECT *
 FROM [SQL Tutorial ].dbo.EmployeeDemographics
