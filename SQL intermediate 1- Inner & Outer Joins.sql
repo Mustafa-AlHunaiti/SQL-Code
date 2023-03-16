@@ -136,3 +136,4 @@ LEFT OUTER JOIN SQLTutorial.dbo.EmployeeSalary
 
 
 
+
