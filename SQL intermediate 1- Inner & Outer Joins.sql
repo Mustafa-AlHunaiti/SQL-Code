@@ -84,16 +84,47 @@ RIGHT OUTER JOIN [SQL Tutorial ].dbo.EmployeeSalary
 	ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
 
 
+/* 
+now why the code below not working, it's not working because we have two columns one in each of these tables and we have to specify what EmployeeID we want 
+because that is going to drastically change what our output is 
+*/
+SELECT EmployeeID, FirstName, LastName, JobTitle, Salary
+FROM [SQL Tutorial ].dbo.EmployeeDemographics
+INNER JOIN [SQL Tutorial ].dbo.EmployeeSalary 
+	ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+	
+-- same output for the two codes below because we use inner join
+
+-- let's use EmployeeDemographics.EmployeeID
+SELECT EmployeeDemographics.EmployeeID, FirstName, LastName, JobTitle, Salary
+FROM [SQL Tutorial ].dbo.EmployeeDemographics
+INNER JOIN [SQL Tutorial ].dbo.EmployeeSalary 
+	ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+	
+-- let's use EmployeeSalary.EmployeeID
+SELECT EmployeeSalary.EmployeeID, FirstName, LastName, JobTitle, Salary
+FROM [SQL Tutorial ].dbo.EmployeeDemographics
+INNER JOIN [SQL Tutorial ].dbo.EmployeeSalary 
+	ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
 
 
+	
+SELECT EmployeeDemographics.EmployeeID, FirstName, LastName, JobTitle, Salary
+FROM [SQL Tutorial ].dbo.EmployeeDemographics
+RIGHT OUTER JOIN [SQL Tutorial ].dbo.EmployeeSalary 
+	ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+
+-- opposite of the above code  
+SELECT EmployeeDemographics.EmployeeID, FirstName, LastName, JobTitle, Salary
+FROM [SQL Tutorial ].dbo.EmployeeDemographics
+LEFT OUTER JOIN [SQL Tutorial ].dbo.EmployeeSalary 
+	ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
 
 
-
-
-
-
-
-
+SELECT EmployeeSalary.EmployeeID, FirstName, LastName, JobTitle, Salary
+FROM [SQL Tutorial ].dbo.EmployeeDemographics
+LEFT OUTER JOIN [SQL Tutorial ].dbo.EmployeeSalary 
+	ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
 
 
 
