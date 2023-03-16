@@ -5,3 +5,6 @@ Please feel free to download and use all code as your own.
 
 
 ![join](https://user-images.githubusercontent.com/83397235/225597700-d37b385a-a097-4803-920d-03886f43dad8.png)
+
+
+![plot](./SQL-Code/blob/main/join.png)
