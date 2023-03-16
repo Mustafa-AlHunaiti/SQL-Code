@@ -37,7 +37,7 @@ JOIN [SQL Tutorial ].dbo.EmployeeSalary -- join by default is gonna say inner
 	ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
 
 
-
+![join](https://user-images.githubusercontent.com/83397235/225597700-d37b385a-a097-4803-920d-03886f43dad8.png)
 
 
 
