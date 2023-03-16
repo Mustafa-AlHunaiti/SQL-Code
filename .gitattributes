@@ -1,5 +1,5 @@
-*.TSQL linguist-detectable=false  
-*.java linguist-detectable=true  
+*.TSQL linguist-detectable=true  
+*.java linguist-detectable=false  
 *.js linguist-detectable=false  
 *.html linguist-detectable=false  
 *.xml linguist-detectable=false
