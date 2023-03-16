@@ -131,8 +131,6 @@ LEFT OUTER JOIN SQLTutorial.dbo.EmployeeSalary
 	ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
 
 
-#usecases 
-
 
 
 
