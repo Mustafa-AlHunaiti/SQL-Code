@@ -39,6 +39,7 @@ JOIN [SQL Tutorial ].dbo.EmployeeSalary -- join by default is gonna say inner
 
 /*
 first of all, before we talk about the codes below keep the image in the readme file with you.
+
 the difference between the 4 codes below is
 
 Code 1- in the inner join is actually returns both tables combined.
