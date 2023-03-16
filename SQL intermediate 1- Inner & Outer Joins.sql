@@ -108,7 +108,10 @@ INNER JOIN SQLTutorial.dbo.EmployeeSalary
 	ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
 
 
-	
+/*
+is gonna take the right table and say we want everything from the right table and everything that's overlapping
+but look at EmployeeID in rows 10 and 11 it's null that's because there is no 1010 in the EmployeeID column from the EmployeeDemographics table
+*/
 SELECT EmployeeDemographics.EmployeeID, FirstName, LastName, JobTitle, Salary
 FROM SQLTutorial.dbo.EmployeeDemographics
 RIGHT OUTER JOIN SQLTutorial.dbo.EmployeeSalary 
@@ -121,10 +124,15 @@ LEFT OUTER JOIN SQLTutorial.dbo.EmployeeSalary
 	ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
 
 
+-- let's use EmployeeSalary.EmployeeID
 SELECT EmployeeSalary.EmployeeID, FirstName, LastName, JobTitle, Salary
 FROM SQLTutorial.dbo.EmployeeDemographics
 LEFT OUTER JOIN SQLTutorial.dbo.EmployeeSalary 
 	ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+
+
+
+
 
 
 
