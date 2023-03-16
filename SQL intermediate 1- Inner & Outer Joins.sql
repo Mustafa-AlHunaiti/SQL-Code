@@ -41,6 +41,8 @@ JOIN [SQL Tutorial ].dbo.EmployeeSalary -- join by default is gonna say inner
 
 
 
+![alt text](https://github.com/Mustafa-AlHunaiti/SQL-Code/blob/main/join.png?raw=true)
+
 
 
 
