@@ -28,13 +28,13 @@ so we're gonna be using the EmployeeID column  from both tables to join these ta
 
 -- the two codes below  will give you the same output 
 SELECT *
-FROM [SQL Tutorial ].dbo.EmployeeDemographics
-INNER JOIN [SQL Tutorial ].dbo.EmployeeSalary
+FROM SQLTutorial.dbo.EmployeeDemographics
+INNER JOIN SQLTutorial.dbo.EmployeeSalary
 	ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID -- join them together which is what we talked about above we're going to be doing that based off the EmployeeID
 
 SELECT *
-FROM [SQL Tutorial ].dbo.EmployeeDemographics
-JOIN [SQL Tutorial ].dbo.EmployeeSalary -- join by default is gonna say inner 
+FROM SQLTutorial.dbo.EmployeeDemographics
+JOIN SQLTutorial.dbo.EmployeeSalary -- join by default is gonna say inner 
 	ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
 
 /*
@@ -48,8 +48,8 @@ Code 1- in the inner join is actually returns both tables combined.
 	so inner join is going to show everything that is common or overlapping between table A and table B
 */	
 SELECT *
-FROM [SQL Tutorial ].dbo.EmployeeDemographics
-INNER JOIN [SQL Tutorial ].dbo.EmployeeSalary
+FROM SQLTutorial.dbo.EmployeeDemographics
+INNER JOIN SQLTutorial.dbo.EmployeeSalary
    ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
    
 /*   
@@ -59,8 +59,8 @@ Code 2- so if you notice the output is very different so why it's so different?
 	of if it has a match based on what we were joining them on so even if table A has an EmployeeID but there's no EmployeeID in table B we're still showing it and vice versa
 */
 SELECT *
-FROM [SQL Tutorial ].dbo.EmployeeDemographics
-FULL OUTER JOIN [SQL Tutorial ].dbo.EmployeeSalary 
+FROM SQLTutorial.dbo.EmployeeDemographics
+FULL OUTER JOIN SQLTutorial.dbo.EmployeeSalary 
 	ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
 
 
@@ -70,8 +70,8 @@ Code 3- left outer join is gonna take the left table and say we want everything 
 	of whether or not it has a match on the EmployeeID in the EmployeeSalary table 
 */
 SELECT *
-FROM [SQL Tutorial ].dbo.EmployeeDemographics
-LEFT OUTER JOIN [SQL Tutorial ].dbo.EmployeeSalary 
+FROM SQLTutorial.dbo.EmployeeDemographics
+LEFT OUTER JOIN SQLTutorial.dbo.EmployeeSalary 
 	ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
 
 
@@ -79,8 +79,8 @@ LEFT OUTER JOIN [SQL Tutorial ].dbo.EmployeeSalary
 Code 4- same concept for Code 3 but for EmployeeSalary (exact opposite)
 */
 SELECT *
-FROM [SQL Tutorial ].dbo.EmployeeDemographics
-RIGHT OUTER JOIN [SQL Tutorial ].dbo.EmployeeSalary 
+FROM SQLTutorial.dbo.EmployeeDemographics
+RIGHT OUTER JOIN SQLTutorial.dbo.EmployeeSalary 
 	ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
 
 
@@ -89,41 +89,41 @@ now why the code below not working, it's not working because we have two columns
 because that is going to drastically change what our output is 
 */
 SELECT EmployeeID, FirstName, LastName, JobTitle, Salary
-FROM [SQL Tutorial ].dbo.EmployeeDemographics
-INNER JOIN [SQL Tutorial ].dbo.EmployeeSalary 
+FROM SQLTutorial.dbo.EmployeeDemographics
+INNER JOIN SQLTutorial.dbo.EmployeeSalary 
 	ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
 	
 -- same output for the two codes below because we use inner join
 
 -- let's use EmployeeDemographics.EmployeeID
 SELECT EmployeeDemographics.EmployeeID, FirstName, LastName, JobTitle, Salary
-FROM [SQL Tutorial ].dbo.EmployeeDemographics
-INNER JOIN [SQL Tutorial ].dbo.EmployeeSalary 
+FROM SQLTutorial.dbo.EmployeeDemographics
+INNER JOIN SQLTutorial.dbo.EmployeeSalary 
 	ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
 	
 -- let's use EmployeeSalary.EmployeeID
 SELECT EmployeeSalary.EmployeeID, FirstName, LastName, JobTitle, Salary
-FROM [SQL Tutorial ].dbo.EmployeeDemographics
-INNER JOIN [SQL Tutorial ].dbo.EmployeeSalary 
+FROM SQLTutorial.dbo.EmployeeDemographics
+INNER JOIN SQLTutorial.dbo.EmployeeSalary 
 	ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
 
 
 	
 SELECT EmployeeDemographics.EmployeeID, FirstName, LastName, JobTitle, Salary
-FROM [SQL Tutorial ].dbo.EmployeeDemographics
-RIGHT OUTER JOIN [SQL Tutorial ].dbo.EmployeeSalary 
+FROM SQLTutorial.dbo.EmployeeDemographics
+RIGHT OUTER JOIN SQLTutorial.dbo.EmployeeSalary 
 	ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
 
 -- opposite of the above code  
 SELECT EmployeeDemographics.EmployeeID, FirstName, LastName, JobTitle, Salary
-FROM [SQL Tutorial ].dbo.EmployeeDemographics
-LEFT OUTER JOIN [SQL Tutorial ].dbo.EmployeeSalary 
+FROM SQLTutorial.dbo.EmployeeDemographics
+LEFT OUTER JOIN SQLTutorial.dbo.EmployeeSalary 
 	ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
 
 
 SELECT EmployeeSalary.EmployeeID, FirstName, LastName, JobTitle, Salary
-FROM [SQL Tutorial ].dbo.EmployeeDemographics
-LEFT OUTER JOIN [SQL Tutorial ].dbo.EmployeeSalary 
+FROM SQLTutorial.dbo.EmployeeDemographics
+LEFT OUTER JOIN SQLTutorial.dbo.EmployeeSalary 
 	ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
 
 
