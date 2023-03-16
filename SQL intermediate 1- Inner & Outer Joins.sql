@@ -25,6 +25,7 @@ so we're gonna be using the EmployeeID column  from both tables to join these ta
 -- start building our query to join these two tables together
 -- first thing we're gonna do is an inner join 
 
+--
 -- the two codes below  will give you the same output 
 SELECT *
 FROM [SQL Tutorial ].dbo.EmployeeDemographics
@@ -37,14 +38,24 @@ JOIN [SQL Tutorial ].dbo.EmployeeSalary -- join by default is gonna say inner
 	ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
 
 
-![join](https://user-images.githubusercontent.com/83397235/225597700-d37b385a-a097-4803-920d-03886f43dad8.png)
 
 
+SELECT *
+FROM [SQL Tutorial ].dbo.EmployeeDemographics
+FULL OUTER JOIN [SQL Tutorial ].dbo.EmployeeSalary 
+	ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
 
-![alt text](https://github.com/Mustafa-AlHunaiti/SQL-Code/blob/main/join.png?raw=true)
+
+SELECT *
+FROM [SQL Tutorial ].dbo.EmployeeDemographics
+LEFT OUTER JOIN [SQL Tutorial ].dbo.EmployeeSalary 
+	ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
 
 
-![plot](./SQL-Code/blob/main/join.png)
+SELECT *
+FROM [SQL Tutorial ].dbo.EmployeeDemographics
+RIGHT OUTER JOIN [SQL Tutorial ].dbo.EmployeeSalary 
+	ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
 
 
 
