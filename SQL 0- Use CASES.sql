@@ -11,7 +11,7 @@ SELECT EmployeeDemographics.EmployeeID, FirstName, LastName, Salary
 FROM SQLTutorial.dbo.EmployeeDemographics
 INNER JOIN SQLTutorial.dbo.EmployeeSalary 
 	ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
-WHERE FirstName <> 'Michael' -- we want to do it where it's not Michael Scott and that's because Michael Scott doesn't want to take away his own money he wants to take away his employees money 
+WHERE FirstName <> 'Michael' AND LastName <> 'Scott' -- we want to do it where it's not Michael Scott and that's because Michael Scott doesn't want to take away his own money he wants to take away his employees money 
 ORDER BY Salary DESC
 
 
