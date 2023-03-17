@@ -1,6 +1,6 @@
 
 
------------------------------------ USE CASES ------------------------------------------------------
+                            ----------------------------------- USE CASES ------------------------------------------------------
 /*
 1- use case: Robert California is pressuring Michael Scott to meet his quarterly quota 
    	     and Michael Scott is almost there he needs a thousand more dollars and 
