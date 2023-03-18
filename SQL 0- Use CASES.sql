@@ -1,6 +1,8 @@
 
 
                             ----------------------------------- USE CASES ------------------------------------------------------
+			    
+			    
 /*
 1- use case: Robert California is pressuring Michael Scott to meet his quarterly quota 
    	     and Michael Scott is almost there he needs a thousand more dollars and 
@@ -13,6 +15,7 @@ INNER JOIN SQLTutorial.dbo.EmployeeSalary
 	ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
 WHERE FirstName <> 'Michael' AND LastName <> 'Scott' -- we want to do it where it's not Michael Scott and that's because Michael Scott doesn't want to take away his own money he wants to take away his employees money 
 ORDER BY Salary DESC
+
 
 
 
@@ -29,6 +32,24 @@ GROUP BY JobTitle
 
 
 
+
+/*
+3- use case: so now we have our employees and in JobTitle the situation of employees,
+             we had a fantastic year this year selling paper, and corporate has allowed Michael Scott to give out a yearly raise to every single employee 
+	     but not every employee is gonna get the same raise because our salesmen are genuinely the people who made us our money and
+	     they're getting the biggest raises while other people aren't gonna get into that big of a raise
+             calculate what their salary will be after they get their raise  
+*/
+SELECT FirstName, LastName, JobTitle, Salary,
+CASE
+	WHEN JobTitle = 'Salesman' THEN Salary + (Salary * .10)
+	WHEN JobTitle = 'Accountant' THEN Salary + (Salary * .05)
+	WHEN JobTitle = 'HR' THEN Salary + (Salary * .000001)
+	ELSE Salary + (Salary * .03)
+END AS SalaryAfterRaise
+FROM EmployeeDemographics
+JOIN EmployeeSalary
+   ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
 
 
 
