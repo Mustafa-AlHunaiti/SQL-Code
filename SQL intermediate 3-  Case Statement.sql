@@ -2,7 +2,8 @@
 Case Statement
 allows you to specify condition and then it also allows you to specify what you want returned when that condition is met 
 */
--- we will start building our case statement
+
+
 /*
 specified what condition we want to look for,
 our condition is WHEN the age is greater than 30 THEN what do we want to be returned we want to return they are Old
@@ -31,6 +32,8 @@ FROM EmployeeDemographics
 WHERE Age IS NOT NULL 
 ORDER BY Age
 
+
+
 /*
 something to note is that the very first condition that is met is going to be returned
 so if there are multiple conditions that meet the criteria only the very first one is going to be returned. 
@@ -47,6 +50,7 @@ END
 FROM EmployeeDemographics
 WHERE Age IS NOT NULL 
 ORDER BY Age
+
 
 /*
 if we were to put the second condition above before the first condition it should work correctly
