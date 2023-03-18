@@ -45,7 +45,7 @@ CASE
 	WHEN JobTitle = 'Salesman' THEN Salary + (Salary * .10) -- we want to give Salesman a 10% raise this year 
 	WHEN JobTitle = 'Accountant' THEN Salary + (Salary * .05) -- we want to give Accountant a 5% raise this year
 	WHEN JobTitle = 'HR' THEN Salary + (Salary * .000001) -- we want to give HR a .0001% raise this year
-	ELSE Salary + (Salary * .03) -- we give everyone else a 3% raise this year
+	ELSE Salary + (Salary * .03) -- we want to give everyone else a 3% raise this year
 END AS SalaryAfterRaise
 FROM EmployeeDemographics
 JOIN EmployeeSalary
