@@ -51,5 +51,5 @@ SELECT Demo.EmployeeID, Demo.FirstName, Demo.LastName, Sal.JobTitle, Ware.Age
 FROM SQLTutorial.dbo.EmployeeDemographics Demo
 LEFT JOIN SQLTutorial.dbo.EmployeeSalary Sal
    ON Demo.EmployeeID = Sal.EmployeeID
-LEFT JOIN [SQL Tutorial.dbo.WareHouseEmployeeDemographics Ware
+LEFT JOIN SQLTutorial.dbo.WareHouseEmployeeDemographics Ware
    ON Demo.EmployeeID = Ware.EmployeeID   
