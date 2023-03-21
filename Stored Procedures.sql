@@ -5,8 +5,6 @@ a Stored Procedure can accept input parameters that means that a single stored P
 and we can all be using different input data a Stored Procedure will also reduce network traffic and increase the performance and lastly if we modify that Stored Procedure
 everyone who uses that Stored Procedure in the future will also get that update 
 */
-
-
 CREATE PROCEDURE Temp_Employee
 AS
 DROP TABLE IF EXISTS #Temp_Employee
@@ -59,5 +57,5 @@ GROUP BY JobTitle
 SELECT *
 FROM #Temp_Employee
 
-exec Temp_Employee2 @jobtitle = 'Salesman'
-exec Temp_Employee2 @jobtitle = 'Accountant'
+EXEC Temp_Employee2 @jobtitle = 'Salesman'
+EXEC Temp_Employee2 @jobtitle = 'Accountant'
