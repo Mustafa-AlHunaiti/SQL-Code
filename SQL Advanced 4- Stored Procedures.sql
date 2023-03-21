@@ -56,6 +56,7 @@ GROUP BY JobTitle
 SELECT *
 FROM #Temp_Employee
 GO;
+
 EXEC Temp_Employee
 EXEC Temp_Employee2 @jobtitle = 'Salesman'
 EXEC Temp_Employee2 @jobtitle = 'Accountant'
