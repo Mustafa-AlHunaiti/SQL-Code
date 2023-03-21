@@ -33,9 +33,12 @@ EXEC Temp_Employee
 
 
 
-
+/*
+add a parameter so what the parameter is going to allow us to do is when we're executing the Stored Procedure we can specify an input into that Stored Procedure
+so that we get a specific result back 
+*/
 CREATE PROCEDURE Temp_Employee2
-@JobTitle nvarchar(100)
+@JobTitle nvarchar(100) -- add our input  
 AS
 DROP TABLE IF EXISTS #temp_employee
 CREATE TABLE #Temp_Employee (
