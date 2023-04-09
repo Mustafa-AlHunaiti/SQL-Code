@@ -13,3 +13,4 @@ While you are reading 'SQL intermediate 1- Inner & Outer Joins.sql'  keep this i
 
 
 
+
